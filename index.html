@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stephen Mwaniki | Cybersecurity Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --bg-dark: #0f172a;
@@ -22,7 +23,7 @@
     }
     header {
       background-color: #1e293b;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 1rem;
       text-align: center;
     }
     header h1 {
@@ -98,19 +99,26 @@
     }
     footer a {
       color: var(--accent);
-      text-decoration: none;
+      margin: 0 0.5rem;
+      font-size: 1.25rem;
     }
     .bio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
       margin-bottom: 2rem;
     }
     .bio img {
-      width: 120px;
-      height: 120px;
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 1rem;
       border: 3px solid var(--accent);
+    }
+    .bio p {
+      max-width: 700px;
     }
   </style>
 </head>
@@ -123,7 +131,7 @@
 
   <section class="bio">
     <img src="./screenshots/stephen-avatar.jpg" alt="Stephen Mwaniki headshot">
-    <p><strong>Cybersecurity enthusiast dedicated to safeguarding digital landscapes. Blending technical skills with real-world practice through hands-on network and application security testing.</strong></p>
+    <p><strong>I help secure digital systems by combining penetration testing, vulnerability research, and traffic analysis to protect modern infrastructure. My passion lies in practical, impactful cybersecurity with results that speak.</strong></p>
   </section>
 
   <section>
@@ -133,21 +141,21 @@
         <h3>🔒 Network Security Basics</h3>
         <p>Secured a virtual network using pfSense, configured LAN/WAN routing, and captured real traffic with Wireshark to analyze threats.</p>
         <img src="./screenshots/wireshark-capture.png" alt="Wireshark capture screenshot">
-        <a href="./screenshots/wireshark-capture.png" class="btn" target="_blank">View Traffic Capture</a>
+        <a href="./screenshots/" class="btn" target="_blank">View Traffic Capture</a>
       </div>
 
       <div class="card">
         <h3>🕷️ Web Application Testing</h3>
         <p>Discovered SQLi and XSS flaws using OWASP ZAP and DVWA. Documented exploit methods and suggested real-world mitigations.</p>
         <img src="./screenshots/zap-alerts.png" alt="OWASP ZAP alerts screenshot">
-        <a href="./screenshots/zap-alerts.png" class="btn" target="_blank">See Vulnerabilities</a>
+        <a href="./screenshots/" class="btn" target="_blank">See Vulnerabilities</a>
       </div>
 
       <div class="card">
         <h3>📢 LinkedIn Branding</h3>
         <p>Built a professional cybersecurity presence through LinkedIn awareness posts and milestone highlights.</p>
         <img src="./screenshots/linkedin-post.png" alt="LinkedIn internship post screenshot">
-        <a href="./screenshots/linkedin-post.png" class="btn" target="_blank">View LinkedIn Post</a>
+        <a href="https://www.linkedin.com/in/stephenmwaniki/posts/" class="btn" target="_blank">View LinkedIn Post</a>
       </div>
     </div>
   </section>
@@ -159,7 +167,10 @@
   </section>
 
   <footer>
-    <p>📬 Connect with me on <a href="https://linkedin.com/in/stephenmwaniki">LinkedIn</a> · <a href="https://github.com/stephen-mwaniki">GitHub</a></p>
+    <p>
+      <a href="https://linkedin.com/in/stephenmwaniki" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/stephen-mwaniki" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    </p>
     <p>&copy; 2025 Stephen Mwaniki — All rights reserved</p>
   </footer>
 
