@@ -3,48 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> MLEGHWA STEPHEN MWANIKI | Cybersecurity Internship Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Stephen Mwaniki | Cybersecurity Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-dark: #0f172a;
+      --bg-light: #f1f5f9;
+      --text-dark: #0f172a;
+      --text-light: #f1f5f9;
+      --accent: #38bdf8;
+    }
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Inter', sans-serif;
       margin: 0;
-      background-color: #0f172a;
-      color: #f1f5f9;
-      transition: background-color 0.3s ease;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     header {
       background-color: #1e293b;
-      padding: 2rem;
+      padding: 2rem 1rem;
       text-align: center;
     }
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2.75rem;
       margin: 0;
+      color: var(--accent);
     }
     header p {
       font-size: 1.2rem;
-      color: #94a3b8;
+      color: #cbd5e1;
+      margin-top: 0.5rem;
     }
     section {
-      padding: 2rem;
-      max-width: 1000px;
+      padding: 2rem 1rem;
+      max-width: 1100px;
       margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
     }
     .grid {
       display: grid;
-      gap: 1.5rem;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
     .card {
       background: #1e293b;
       border-radius: 1rem;
       padding: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
     }
     .card h3 {
       margin-top: 0;
-      color: #38bdf8;
+      color: var(--accent);
     }
     .card img {
       width: 100%;
@@ -53,58 +72,80 @@
     }
     .btn {
       display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background-color: #38bdf8;
-      color: #0f172a;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--accent);
+      color: var(--text-dark);
       text-decoration: none;
       border-radius: 0.5rem;
       margin-top: 1rem;
+      font-weight: 600;
     }
     .toggle-btn {
-      position: absolute;
+      position: fixed;
       top: 1rem;
       right: 1rem;
       padding: 0.5rem 1rem;
-      background: #38bdf8;
-      color: #0f172a;
+      background: var(--accent);
+      color: var(--text-dark);
       border: none;
       border-radius: 0.5rem;
       cursor: pointer;
     }
     footer {
       text-align: center;
-      padding: 2rem;
-      color: #64748b;
+      padding: 2rem 1rem;
+      color: #94a3b8;
+    }
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .bio {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .bio img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid var(--accent);
     }
   </style>
 </head>
 <body>
   <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
   <header>
-    <h1>Mleghwa Stephen Mwaniki</h1>
+    <h1>Stephen Mwaniki</h1>
     <p>Cybersecurity Internship Portfolio | Redynox - June to July 2025</p>
   </header>
 
+  <section class="bio">
+    <img src="./screenshots/stephen-avatar.jpg" alt="Stephen Mwaniki headshot">
+    <p><strong>Cybersecurity enthusiast dedicated to safeguarding digital landscapes. Blending technical skills with real-world practice through hands-on network and application security testing.</strong></p>
+  </section>
+
   <section>
-    <h2>Project Overview</h2>
+    <h2>Project Highlights</h2>
     <div class="grid">
       <div class="card">
-        <h3>Network Security Basics</h3>
-        <p>Configured a secure network using pfSense, analyzed traffic with Wireshark, and implemented firewall rules to block malicious activity.</p>
-        <img src="./screenshots/ICMP1 capture.PNG" alt="Wireshark capture screenshot">
-        <a href="./screenshots/wireshark-capture.png" class="btn" target="_blank">View Screenshot</a>
+        <h3>🔒 Network Security Basics</h3>
+        <p>Secured a virtual network using pfSense, configured LAN/WAN routing, and captured real traffic with Wireshark to analyze threats.</p>
+        <img src="./screenshots/wireshark-capture.png" alt="Wireshark capture screenshot">
+        <a href="./screenshots/wireshark-capture.png" class="btn" target="_blank">View Traffic Capture</a>
       </div>
 
       <div class="card">
-        <h3>Web Application Testing</h3>
-        <p>Used OWASP ZAP and DVWA to discover and document SQLi, XSS, and command injection vulnerabilities.</p>
+        <h3>🕷️ Web Application Testing</h3>
+        <p>Discovered SQLi and XSS flaws using OWASP ZAP and DVWA. Documented exploit methods and suggested real-world mitigations.</p>
         <img src="./screenshots/zap-alerts.png" alt="OWASP ZAP alerts screenshot">
-        <a href="./screenshots/zap-alerts.png" class="btn" target="_blank">View ZAP Findings</a>
+        <a href="./screenshots/zap-alerts.png" class="btn" target="_blank">See Vulnerabilities</a>
       </div>
 
       <div class="card">
-        <h3>LinkedIn Branding</h3>
-        <p>Documented internship progress and built a cybersecurity brand through engaging posts and profile updates on LinkedIn.</p>
+        <h3>📢 LinkedIn Branding</h3>
+        <p>Built a professional cybersecurity presence through LinkedIn awareness posts and milestone highlights.</p>
         <img src="./screenshots/linkedin-post.png" alt="LinkedIn internship post screenshot">
         <a href="./screenshots/linkedin-post.png" class="btn" target="_blank">View LinkedIn Post</a>
       </div>
@@ -112,27 +153,27 @@
   </section>
 
   <section>
-    <h2>Internship Report</h2>
-    <p>You can download the full PDF report summarizing all tasks and outcomes:</p>
-    <a href="./Internship_Report_Stephen_Mwaniki.pdf" class="btn">Download Report</a>
+    <h2>📄 Final Report</h2>
+    <p>Read my detailed PDF report with task objectives, screenshots, findings, and lessons learned.</p>
+    <a href="./Internship_Report_Stephen_Mwaniki.pdf" class="btn">Download Internship Report</a>
   </section>
 
   <footer>
-    <p>Connect with me on <a href="https://linkedin.com/in/stephenmwaniki" style="color:#38bdf8;">LinkedIn</a> | GitHub: <a href="https://github.com/stephen-mwaniki" style="color:#38bdf8;">stephen-mwaniki</a></p>
+    <p>📬 Connect with me on <a href="https://linkedin.com/in/stephenmwaniki">LinkedIn</a> · <a href="https://github.com/stephen-mwaniki">GitHub</a></p>
+    <p>&copy; 2025 Stephen Mwaniki — All rights reserved</p>
   </footer>
 
   <script>
     function toggleTheme() {
       document.body.classList.toggle('light-mode');
       if (document.body.classList.contains('light-mode')) {
-        document.body.style.backgroundColor = '#f1f5f9';
-        document.body.style.color = '#0f172a';
+        document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-light');
+        document.body.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-dark');
       } else {
-        document.body.style.backgroundColor = '#0f172a';
-        document.body.style.color = '#f1f5f9';
+        document.body.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-dark');
+        document.body.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text-light');
       }
     }
   </script>
 </body>
 </html>
-
